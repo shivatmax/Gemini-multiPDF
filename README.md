@@ -5,8 +5,7 @@
     <h1 align="center">GEMINI-MULTIPDF</h1>
 </p>
 <p align="center">
-    <em>Error generating text for slogan: Client error '401 Unauthorized' for url 'https://api.openai.com/v1/chat/completions'
-For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/401</em>
+    Google Palm API
 </p>
 <p align="center">
 	<img src="https://img.shields.io/github/license/shivatmax/Gemini-multiPDF?style=flat&color=0080ff" alt="license">
