@@ -5,7 +5,7 @@ from langchain.text_splitter import RecursiveCharacterTextSplitter
 import os
 from langchain_google_genai import GoogleGenerativeAIEmbeddings
 import google.generativeai as genai
-from langchain.vectorstores import FAISS
+from langchain_community.vectorstores import FAISS
 from langchain_google_genai import ChatGoogleGenerativeAI
 from langchain.chains.question_answering import load_qa_chain
 from langchain.prompts import PromptTemplate
@@ -44,11 +44,11 @@ def get_conversational_chain():
     Context:\n {context}?\n
     Question: \n{question}\n
 
-    Answer:
+    Answer:{context}
     """
-    model = ChatGoogleGenerativeAI(model="gemini-pro", temperature=0.3)
+    llm = ChatGoogleGenerativeAI(model="gemini-pro", temperature=0.5)
     prompt = PromptTemplate(template = prompt_template, input_variables = ["context", "question"])
-    chain = load_qa_chain(model, chain_type="stuff", prompt=prompt)
+    chain = load_qa_chain(llm, chain_type="stuff", prompt=prompt)
     return chain
 
 # Function to get user input and generate response
@@ -56,10 +56,11 @@ def user_input(user_question):
     embeddings = GoogleGenerativeAIEmbeddings(model = "models/embedding-001")
     new_db = FAISS.load_local("faiss_index", embeddings)
     docs = new_db.similarity_search(user_question)
+    print(docs)
     chain = get_conversational_chain()
     response = chain(
         {"input_documents":docs, "question": user_question},
         return_only_outputs=True
     )
-    print(response)
-    st.write("Reply: ", response["output_text"])
+    # print(response)
+    st.write("Reply:\n ", response["output_text"])
