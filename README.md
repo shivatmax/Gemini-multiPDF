@@ -28,32 +28,18 @@
 > - [ Overview](#-overview)
 > - [ Features](#-features)
 > - [ Repository Structure](#-repository-structure)
-> - [ Modules](#-modules)
 > - [ Getting Started](#-getting-started)
 >   - [ Installation](#-installation)
 >   - [ Running Gemini-multiPDF](#-running-Gemini-multiPDF)
->   - [ Tests](#-tests)
 > - [ Project Roadmap](#-project-roadmap)
 > - [ Contributing](#-contributing)
 > - [ License](#-license)
 > - [ Acknowledgments](#-acknowledgments)
 
 ---
+Google Gemini pro API - https://makersuite.google.com/app/apikey
 
-##  Overview
-
-Error generating text for overview: Client error '401 Unauthorized' for url 'https://api.openai.com/v1/chat/completions'
-For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/401
-
----
-
-##  Features
-
-Error generating text for features: Client error '401 Unauthorized' for url 'https://api.openai.com/v1/chat/completions'
-For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/401
-
----
-
+To learn more about Gemini-pro and Gemini-pro-vision - https://ai.google.dev/tutorials/python_quickstart
 ##  Repository Structure
 
 ```sh
@@ -66,34 +52,13 @@ For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/St
     └── requirements.txt
 ```
 
----
-
-##  Modules
-
-<details closed><summary>.</summary>
-
-| File                                                                                          | Summary                                                                                                                                                                                                                   |
-| ---                                                                                           | ---                                                                                                                                                                                                                       |
-| [gemini_pdf.py](https://github.com/shivatmax/Gemini-multiPDF/blob/master/gemini_pdf.py)       | Error generating text for gemini_pdf.py: Client error '401 Unauthorized' for url 'https://api.openai.com/v1/chat/completions'
-For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/401    |
-| [.env](https://github.com/shivatmax/Gemini-multiPDF/blob/master/.env)                         | Error generating text for .env: Client error '401 Unauthorized' for url 'https://api.openai.com/v1/chat/completions'
-For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/401             |
-| [requirements.txt](https://github.com/shivatmax/Gemini-multiPDF/blob/master/requirements.txt) | Error generating text for requirements.txt: Client error '401 Unauthorized' for url 'https://api.openai.com/v1/chat/completions'
-For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/401 |
-| [main.py](https://github.com/shivatmax/Gemini-multiPDF/blob/master/main.py)                   | Error generating text for main.py: Client error '401 Unauthorized' for url 'https://api.openai.com/v1/chat/completions'
-For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/401          |
-
-</details>
-
----
-
 ##  Getting Started
 
 ***Requirements***
 
 Ensure you have the following dependencies installed on your system:
 
-* **Python**: `version x.y.z`
+* **Python**: `version 3.10` or newer
 
 ###  Installation
 
@@ -120,26 +85,8 @@ pip install -r requirements.txt
 Use the following command to run Gemini-multiPDF:
 
 ```sh
-python main.py
+streamlit run main.py
 ```
-
-###  Tests
-
-To execute tests, run:
-
-```sh
-pytest
-```
-
----
-
-##  Project Roadmap
-
-- [X] `► INSERT-TASK-1`
-- [ ] `► INSERT-TASK-2`
-- [ ] `► ...`
-
----
 
 ##  Contributing
 
